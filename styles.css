@@ -1,1 +1,48 @@
 /*Maak hier jouw CSS!*/
+
+.container {
+    background-color: burlywood;
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 190px 100px auto 50px;
+    grid-template-areas:
+            "header-small header-large header-large"
+            "content header-large header-large"
+            "content aside-center aside-border"
+            "content aside-center aside-border"
+            "footer footer footer";
+}
+.grid-item {
+    background-color: darkred;
+    padding:8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.grid-header-small {
+    grid-area: header-small;
+}
+
+.grid-content {
+    grid-area: content;
+}
+
+.grid-header-large {
+    grid-area: header-large;
+}
+
+.grid-aside-center {
+    grid-area: aside-center
+}
+
+.grid-aside-border {
+    grid-area: aside-border
+}
+
+.grid-footer {
+    grid-area: footer;
+}
